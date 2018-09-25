@@ -1,0 +1,19 @@
+dist: trusty
+sudo: tirue
+language: generic
+branches:
+  only:
+    - master
+  
+install:
+  - sudo pip install tox
+python:
+  - "3.5"
+ 	 
+matrix:
+include:
+  - python: "3.5"
+env: TOXENV=py35
+ 	 
+ 	# command to run tests
+ 	script:
